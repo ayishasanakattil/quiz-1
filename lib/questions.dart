@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:quiz/trueimg.dart';
 
 class Question extends StatefulWidget {
   const Question({Key? key}) : super(key: key);
@@ -11,30 +14,52 @@ class _QuestionState extends State<Question> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
-      body: Padding(
-        padding: const EdgeInsets.only(),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 50,
-              ),
-              Text(
-                "Asia is the largest continent.",
-                style: TextStyle(fontSize: 22, color: Colors.white),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              ElevatedButton(onPressed: () {}, child: Text('True')),
-              SizedBox(
-                height: 50,
-              ),
-              ElevatedButton(onPressed: () {}, child: Text('False')),
-            ],
-          ),
+      backgroundColor: Colors.amberAccent,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 50,
+            ),
+            Text(
+              "Asia is the largest continent.",
+              style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.black,
+                  fontStyle: FontStyle.italic),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Container(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                  onPressed: () {
+                  
+                  },
+                  child: Text(
+                    'True',
+                    style: TextStyle(fontSize: 22,color: Colors.white),
+                  )),
+              height: 50,
+              width: 200,
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Container(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.red,),
+                  onPressed: () {},
+                  child: Text(
+                    'False',
+                    style: TextStyle(fontSize: 22,color: Colors.white),
+                  )),
+              height: 50,
+              width: 200,
+            ),
+          ],
         ),
       ),
     );
