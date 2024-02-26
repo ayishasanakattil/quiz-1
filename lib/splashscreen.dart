@@ -15,16 +15,22 @@ class _SplashState extends State<Splash> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 2), () { Navigator.push(context, MaterialPageRoute(builder: (context) => Question(),));});
+    Timer(Duration(seconds: 2), () {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Question(),
+          ));
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-          child: Image.asset('Images/quiz.png'),
-        ), 
-        
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Image.asset('Images/quiz.png'),
+      ),
     );
   }
 }

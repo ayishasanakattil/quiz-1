@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:quiz/trueimg.dart';
 
 class Question extends StatefulWidget {
   const Question({Key? key}) : super(key: key);
@@ -23,24 +22,24 @@ class _QuestionState extends State<Question> {
               height: 50,
             ),
             Text(
-              "Asia is the largest continent.",
+              "1. Asia is the largest continent.",
               style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 28,
                   color: Colors.black,
-                  fontStyle: FontStyle.italic),
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 50,
             ),
             Container(
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-                  onPressed: () {
-
-                  },
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                  onPressed: () {},
                   child: Text(
                     'True',
-                    style: TextStyle(fontSize: 22,color: Colors.white),
+                    style: TextStyle(fontSize: 22, color: Colors.white),
                   )),
               height: 50,
               width: 200,
@@ -50,11 +49,13 @@ class _QuestionState extends State<Question> {
             ),
             Container(
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.red,),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                  ),
                   onPressed: () {},
                   child: Text(
                     'False',
-                    style: TextStyle(fontSize: 22,color: Colors.white),
+                    style: TextStyle(fontSize: 22, color: Colors.white),
                   )),
               height: 50,
               width: 200,
