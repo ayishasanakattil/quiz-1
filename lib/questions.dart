@@ -23,7 +23,7 @@ class _QuestionState extends State<Question> {
               height: 50,
             ),
             Text(
-              "Asia is the larges   t continent.",
+              "Asia is the largest continent.",
               style: TextStyle(
                   fontSize: 22,
                   color: Colors.black,
