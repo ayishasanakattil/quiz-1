@@ -23,7 +23,7 @@ class _QuestionState extends State<Question> {
               height: 50,
             ),
             Text(
-              "Asia is the largest continent.",
+              "Asia is the larges   t continent.",
               style: TextStyle(
                   fontSize: 22,
                   color: Colors.black,
@@ -36,7 +36,7 @@ class _QuestionState extends State<Question> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
                   onPressed: () {
-                  
+
                   },
                   child: Text(
                     'True',
