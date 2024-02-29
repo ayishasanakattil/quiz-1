@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'question2.dart';
+
 class Question extends StatefulWidget {
   const Question({Key? key}) : super(key: key);
 
@@ -10,6 +12,28 @@ class Question extends StatefulWidget {
 }
 
 class _QuestionState extends State<Question> {
+  List question=[
+    Quiz(que:'sky is green',ans:false),
+    Quiz(que:'india is a state',ans:false),
+    Quiz(que:'pranav is a dancer',ans:false),
+    Quiz(que:'sanagh is a green flag',ans: true),
+    Quiz(que:'sreya is green flag',ans: true),
+    Quiz(que:'diya is cool',ans: true),
+    Quiz(que:'linnet is sooper',ans: false),
+    Quiz(que:'hamna sings well',ans: true),
+    Quiz(que:'parrot is an animal',ans: false),
+    Quiz(que:'cat is a bird',ans: true),
+  ];
+  int q_no=0;
+  void nextQus(){
+    setState(() {
+      if(q_no<question.length){
+        q_no++;
+      }
+    });
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +46,7 @@ class _QuestionState extends State<Question> {
               height: 50,
             ),
             Text(
-              "1. Asia is the largest continent.",
+              question[q_no].que,
               style: TextStyle(
                   fontSize: 28,
                   color: Colors.black,
@@ -36,7 +60,9 @@ class _QuestionState extends State<Question> {
               child: ElevatedButton(
                   style:
                       ElevatedButton.styleFrom(backgroundColor: Colors.green),
-                  onPressed: () {},
+                  onPressed: () {
+                    nextQus();
+                  },
                   child: Text(
                     'True',
                     style: TextStyle(fontSize: 22, color: Colors.white),
